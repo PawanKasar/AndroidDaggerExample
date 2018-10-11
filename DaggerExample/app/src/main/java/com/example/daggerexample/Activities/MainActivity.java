@@ -1,4 +1,4 @@
-package com.example.daggerexample;
+package com.example.daggerexample.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import com.example.daggerexample.Adapters.RecyclerViewAdapterClass;
 import com.example.daggerexample.Interfaces.ApiCall;
 import com.example.daggerexample.Models.HerosModelClass;
 import com.example.daggerexample.MyApplication.MyApplicationClass;
+import com.example.daggerexample.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //listView.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, heroes));
-                recyclerViewAdapterClass = new RecyclerViewAdapterClass(modelClassArrayList,modelClass,MainActivity.this);
+                recyclerViewAdapterClass = new RecyclerViewAdapterClass(modelClassArrayList,modelClass,getApplicationContext());
                 recyclerView.setLayoutManager(layoutManager);
                 recyclerView.setAdapter(recyclerViewAdapterClass);
             }
